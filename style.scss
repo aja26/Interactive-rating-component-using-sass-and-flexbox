@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap');
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+
+*{
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: $Very-Dark-Blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    background-color: $Dark-Blue;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 30px;
+    padding: 2rem;
+    font-family: 'Work Sans', sans-serif;   
+}
+
+.front{
+    display: block;
+}
+
+.front.active{
+    display: none;
+}
+
+main img.logo{
+    width: 14%;
+    background-color: rgba(250, 250, 250, 0.07);
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+h1, button{
+    color: $White;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+p{
+    color: $Medium-Grey;
+    line-height: 25px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.numbers{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.numbers span{
+    font-size: 15px;
+    color: hsl(217deg, 12%, 63%);
+    border-radius: 50%;
+    background-color: rgba(250, 250, 250, 0.07);
+    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.numbers span:hover{
+    background-color: $Orange;
+    color: $White;
+    cursor: pointer;
+    color: $White;
+}   
+
+.numbers span.active{
+    background-color: $Medium-Grey;
+    color: $White;
+}
+
+button{
+    background-color: $Orange;
+    border: 0;
+    border-radius: 30px;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+}
+
+.back{
+    display: none;
+}
+
+.back.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back img{
+    margin-bottom: 30px;
+}
+
+#selected-num{
+    background-color: rgba(250, 250, 250, 0.07);
+    color: $Orange;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.back p{
+    text-align: center;
+}
+
+#alert{
+    color: $White;
+    margin-bottom: 10px;
+    display: block;
+    opacity: 0;
+}
+
+#alert.warning{
+    color:red;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    main {
+      width: 350px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .numbers {
+        margin-bottom: 0px;
+    }
+  }
